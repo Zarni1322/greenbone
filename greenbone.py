@@ -29,7 +29,7 @@ class GreenboneManager:
 
     def greenbone(self):
         print("\nInstall Greenbone Package\n")
-        greenbone_cmd = "apt install gvm"
+        greenbone_cmd = "apt install gvm -y"
         self.run_command(greenbone_cmd)
 
     def feed_update(self):
