@@ -14,6 +14,7 @@ class GreenboneManager:
         self.package_update()
         self.greenbone()
         self.feed_update()
+        self.gvm_setup()
         self.user()
         self.gvm_run()
 
@@ -35,6 +36,10 @@ class GreenboneManager:
         print("\nFeed Updating\n")
         feed_update_cmd = "gvm-feed-update"
         self.run_command(feed_update_cmd)
+
+    def gvm_setup(self):
+        gvm_setup_check = "gvm-setup -h"
+        self.run_command(gvm_setup_check)
 
     def user(self):
         user_pass = input("Do you want to set a password for admin (Y/N): ")
